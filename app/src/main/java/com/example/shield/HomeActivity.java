@@ -12,7 +12,7 @@ import com.test.shield.HelpActivity;
 import com.test.shield.TraffickingActivity;
 
 public class HomeActivity extends AppCompatActivity {
-    Button btnLogout, trafik,domvol;
+    Button btnLogout, trafik,domvol,logout;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
@@ -20,6 +20,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        logout=findViewById(R.id.logout);
         btnLogout = findViewById(R.id.help);
         trafik=findViewById(R.id.trafficking);
         domvol=findViewById(R.id.domvol);
@@ -51,8 +52,16 @@ public class HomeActivity extends AppCompatActivity {
         domvol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
+                //FirebaseAuth.getInstance().signOut();
                 Intent intToMain = new Intent(HomeActivity.this, DomesticActivity.class);
+                startActivity(intToMain);
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intToMain = new Intent(HomeActivity.this, LoginActivity.class);
                 startActivity(intToMain);
             }
         });
