@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shield.HomeActivity">
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="214dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="44dp"
+        android:text="HELP"
+        app:layout_constraintBottom_toTopOf="@+id/domvol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="166dp"
+        android:layout_height="24dp"
+        android:text="Welcome You are logged In"
+        app:layout_constraintBottom_toTopOf="@+id/help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <Button
+        android:id="@+id/domvol"
+        android:layout_width="210dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="48dp"
+        android:text="DOMESTIC VIOLENCE"
+        app:layout_constraintBottom_toTopOf="@+id/trafficking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/trafficking"
+        android:layout_width="204dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="100dp"
+        android:text="TRAFFICKING"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
